@@ -1,0 +1,21 @@
+.planet {
+  position: absolute;
+  z-index: -1;
+  height: 84.5971564%;
+  width: auto;
+  top: 50%;
+  left: 33%;
+  transform: translateY(-50%);
+  &__cloud {
+    animation: linear 3s infinite rotate;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(75%);
+  }
+}

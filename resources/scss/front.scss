@@ -1,0 +1,108 @@
+.hero {
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 2rem;
+  //padding: 15.8203125vh 9.375vw;
+  padding: 30.17751479vh 1rem;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  &__pre {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    font-size: 4.375rem;
+    margin-bottom: 1rem;
+    &__word {
+      display: block;
+      //&:nth-child(2) {
+      //  text-align: right;
+      //}
+    }
+  }
+  &__tagline {
+    line-height: 1.5;
+    max-width: 15rem;
+  }
+  &__arrow {
+    transform-origin: left;
+    stroke: #fff;
+    stroke-width: 2px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    animation: 3s ease-in-out infinite float;
+  }
+}
+.about {
+  background: white;
+  color: #1B1B1B;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-areas:
+          'img title'
+          'desc desc';
+  grid-template-columns: auto 1fr;
+  &__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    grid-area: title;
+    align-self: end;
+    margin-left: 1.25rem;
+    max-width: 11rem;
+  }
+  &__img-container {
+    grid-area: img;
+    width: 10.5625rem;
+    height: 11rem;
+    background: #5BBAC0;
+    //background: #37A3AB;
+    display: block;
+    bottom: 0;
+    position: relative;
+    margin: 2.5rem 0 0.625rem;
+    &__img {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  &__desc {
+    grid-area: desc;
+    margin-top: 0.875rem;
+  }
+  &__separator {
+    display: block;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+    position: relative;
+  }
+}
+.projects {
+  margin: 0 4.1025641%;
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  &__project {
+  .project {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(90deg) translateX(-50%);
+  }
+  50% {
+    transform: translateY(0.7rem) rotate(90deg) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg) translateX(-50%);
+  }
+}

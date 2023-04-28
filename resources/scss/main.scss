@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Roc Grotesk";
+  src: url("../fonts/rocgrotesk-extrabold.otf");
+}
+
+@import "reset";
+@import "utils";
+
+body {
+  background: #1B1B1B;
+  color: white;
+  font-family: "Acumin Pro", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Roc Grotesk", sans-serif;
+}
+
+@import "nav";
+@import "front";
+@import "planet";
