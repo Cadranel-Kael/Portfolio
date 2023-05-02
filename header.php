@@ -9,7 +9,7 @@
 <body>
 <div class="sr-only">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
-    <h1><?= get_field('main_title') ?></h1>
+    <h1><?= get_field('page_title') ?></h1>
     <?php endwhile; else: ?>
     <h1><?= get_the_title(); ?></h1>
     <?php endif; ?>

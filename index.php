@@ -45,13 +45,22 @@
         'posts_per_page' => 4,
     ]);
     if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
-        <div class="projects__project project">
+        <article class="projects__project project">
+            <div class="project__title-container">
             <h3 class="project__title"><?= get_field('title') ?></h3>
+            </div>
             <div class="project__desc"><?= get_field('desc') ?></div>
-        </div>
-    <?php endwhile; else: ?>
-        <p class="projects__empty">No projects to show for the moment :(</p>
-    <?php endif; ?>
-<?php endwhile; endif; ?>
+        </article>
+    <?php endwhile; endif; wp_reset_postdata()?>
     </section>
+    <section class="faq">
+        <h2 class="faq__title"><?= the_field('faq_title', false, false); ?></h2>
+        <?php $faqs = get_field('faq'); foreach ($faqs as $faq): ?>
+            <article class="faq__question">
+                <h3 class="faq__question__title"><?= $faq['question'] ?></h3>
+                <p class="faq__question__desc"><?= $faq['answer'] ?></p>
+            </article>
+        <?php endforeach;?>
+    </section>
+<?php endwhile; endif; ?>
 <?php get_footer();

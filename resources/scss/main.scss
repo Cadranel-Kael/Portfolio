@@ -1,15 +1,13 @@
-@font-face {
-  font-family: "Roc Grotesk";
-  src: url("../fonts/rocgrotesk-extrabold.otf");
-}
-
+@import "font";
 @import "reset";
 @import "utils";
+@import "variables";
 
 body {
-  background: #1B1B1B;
+  background: $secondary-color;
   color: white;
-  font-family: "Acumin Pro", sans-serif;
+  font-family: "Metropolis", sans-serif;
+  font-weight: $weight-regular;
 }
 
 h1, h2, h3 {

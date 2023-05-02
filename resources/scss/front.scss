@@ -1,3 +1,5 @@
+@import "variables";
+
 .hero {
   box-sizing: border-box;
   height: 100vh;
@@ -15,6 +17,7 @@
   &__title {
     font-size: 4.375rem;
     margin-bottom: 1rem;
+    font-weight: bold;
     &__word {
       display: block;
       //&:nth-child(2) {
@@ -47,11 +50,14 @@
   grid-template-columns: auto 1fr;
   &__title {
     font-size: 2rem;
-    text-transform: uppercase;
     grid-area: title;
     align-self: end;
     margin-left: 1.25rem;
     max-width: 11rem;
+    strong {
+      font-weight: $weight-extra-bold;
+      display: block;
+    }
   }
   &__img-container {
     grid-area: img;
@@ -71,13 +77,14 @@
   &__desc {
     grid-area: desc;
     margin-top: 0.875rem;
+    line-height: 1.6;
   }
   &__separator {
     display: block;
+    position: absolute;
     width: 100vw;
     height: auto;
     z-index: -1;
-    position: relative;
   }
 }
 .projects {
@@ -85,10 +92,15 @@
   &__title {
     font-size: 2rem;
     text-align: center;
+    font-weight: $weight-medium;
+    margin: 1.625rem auto 0;
+    max-width: 22rem;
+    text-shadow: 1px 1px 2px $secondary-color;
   }
   &__project {
   .project {
     &__title {
+      font-family: "Roc Grotesk Wide", sans-serif;
       font-size: 2.5rem;
     }
   }
