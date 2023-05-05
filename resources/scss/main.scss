@@ -1,6 +1,6 @@
-@import "font";
-@import "reset";
-@import "utils";
+@import "utils/font";
+@import "utils/reset";
+@import "utils/utils";
 @import "variables";
 
 body {
@@ -15,5 +15,4 @@ h1, h2, h3 {
 }
 
 @import "nav";
-@import "front";
-@import "planet";
+@import "front/front";

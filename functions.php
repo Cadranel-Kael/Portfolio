@@ -62,6 +62,20 @@ add_action('init', 'kc_register_custom_post_types');
 
 load_theme_textdomain('kc', get_template_directory() . '/locales');
 
+function __kc(string $field)
+{
+    $base = '';
+    $replacements = [
+        '::star::' => '<svg role="img" width="28" height="28"><use xlink:href="' . get_stylesheet_directory_uri() . '/public/images/sprite.svg#star--black"></use></svg>',
+    ];
+
+    foreach ($replacements as $key => $value) {
+        $base .= str_replace($key, $value, $field);
+    }
+
+    return $base;
+}
+
 function __hepl(string $translation, array $replacements = [])
 {
     $base = __($translation, 'hepl');

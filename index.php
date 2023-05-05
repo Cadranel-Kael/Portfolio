@@ -18,10 +18,13 @@
     </div>
     <section class="about">
         <h2 class="about__title">
+            __kc(get_field('about_title')) {
+            }
             <?php
             $sprite = '<svg role="img" width="28" height="28"><use xlink:href="' . get_stylesheet_directory_uri() . '/public/images/sprite.svg#star--black"></use></svg>';
             $title = get_field('about_title');
-            $replace = str_replace("<br>", $sprite, $title);
+            $replace = str_replace("<br>", "", $title);
+            $replace = str_replace("::star::", $sprite, $title);
             echo $replace;
             ?>
         </h2>
@@ -42,11 +45,9 @@
         ]);
         if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
             <article class="projects__project project">
-                <div class="project__title-container">
-                    <h3 class="project__title"><?= get_field('title') ?></h3>
-                </div>
+                <h3 class="project__title"><?= get_field('title') ?></h3>
                 <div class="project__desc"><?= get_field('desc') ?></div>
-                <a class="project__link" href="<?= get_permalink(); ?>">Go to <?= get_field('title') ?></a>
+                <a class="project__link" href="<?= get_permalink(); ?>">Check <?= get_field('title') ?> project</a>
             </article>
         <?php endwhile; endif;
         wp_reset_postdata() ?>
