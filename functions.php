@@ -73,6 +73,17 @@ function __hepl(string $translation, array $replacements = [])
     return $base;
 }
 
+// Remove the 'p' tag automatically added by wp
+// Remove p tags from ACF WYSIWYG field
+function acf_wysiwyg_remove_wpautop() {
+    // remove p tags //
+    remove_filter('acf_the_content', 'wpautop' );
+    // add line breaks before all newlines //
+//    add_filter( 'acf_the_content', 'nl2br' );
+}
+add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
+
+
 ///**
 // * Under Maintenance
 // */

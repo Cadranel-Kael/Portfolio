@@ -6,16 +6,19 @@
   top: 50%;
   left: 33%;
   transform: translateY(-50%);
-  &__cloud {
-    animation: linear 3s infinite rotate;
+  &__first {
+    animation: linear 10s infinite rotate;
+  }
+  &__second {
+    animation: linear 10s infinite rotate;
   }
 }
 
 @keyframes rotate {
   0% {
-    transform: translateX(0);
+    transform: translateX(-32%) translateZ(0);
   }
   100% {
-    transform: translateX(75%);
+    transform: translateX(68%) translateZ(0);
   }
 }

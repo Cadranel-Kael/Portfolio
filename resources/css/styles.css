@@ -146,7 +146,8 @@ h1, h2, h3 {
     -ms-flex-item-align: end;
         align-self: end;
     margin-left: 1.25rem;
-    max-width: 11rem; }
+    max-width: 11rem;
+    /* Use the background-position property to specify which icon to display */ }
     .about__title strong {
       font-weight: 800;
       display: block; }
@@ -203,11 +204,13 @@ h1, h2, h3 {
   left: 33%;
   -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
-  .planet__cloud {
-    animation: linear 3s infinite rotate; }
+  .planet__first {
+    animation: linear 10s infinite rotate; }
+  .planet__second {
+    animation: linear 10s infinite rotate; }
 
 @keyframes rotate {
   0% {
-    transform: translateX(0); }
+    transform: translateX(-32%) translateZ(0); }
   100% {
-    transform: translateX(75%); } }
+    transform: translateX(68%) translateZ(0); } }

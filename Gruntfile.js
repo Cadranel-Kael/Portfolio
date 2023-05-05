@@ -60,6 +60,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-ts");
 
     grunt.registerTask('prod', ['sass', 'autoprefixer', 'cssmin', 'ts', 'uglify']);
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['prod', 'watch']);
 };
 
