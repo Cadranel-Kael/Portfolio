@@ -1,0 +1,11 @@
+let mix = require('laravel-mix');
+
+mix.ts('resources/ts/main.ts', 'js').sourceMaps()
+    .sass('resources/scss/main.scss', 'css').sourceMaps()
+    .setPublicPath('public').setResourceRoot('../')
+    .browserSync({
+        proxy: false,
+        server: {
+            baseDir: './'
+        }
+    });

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
-    <div class="hero">
+    <canvas id="mouse-canvas"></canvas>
+    <section class="hero">
         <?php include_once "planet.php" ?>
         <div class="hero__pre"><?= get_field('pre') ?></div>
         <h2 class="hero__title">
@@ -15,18 +16,10 @@
         <svg class="hero__arrow" role="img" width="68.93" height="52">
             <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow' ?>"/>
         </svg>
-    </div>
+    </section>
     <section class="about">
         <h2 class="about__title">
-            __kc(get_field('about_title')) {
-            }
-            <?php
-            $sprite = '<svg role="img" width="28" height="28"><use xlink:href="' . get_stylesheet_directory_uri() . '/public/images/sprite.svg#star--black"></use></svg>';
-            $title = get_field('about_title');
-            $replace = str_replace("<br>", "", $title);
-            $replace = str_replace("::star::", $sprite, $title);
-            echo $replace;
-            ?>
+            <?= __kc(get_field('about_title')); ?>
         </h2>
         <div class="about__img-container">
             <?= wp_get_attachment_image(get_field('about_img'), ['169', '247'], '', ['class' => 'about__img-container__img']); ?>
@@ -37,7 +30,7 @@
         <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-about"' ?>"/>
     </svg>
     <section class="projects">
-        <h2 class="projects__title"><?= get_field('projects_title') ?></h2>
+        <h2 class="projects__title"><?= __kc(get_field('projects_title')); ?></h2>
         <?php
         $projects = new WP_Query([
             'post_type' => 'projects',
@@ -62,5 +55,6 @@
             </article>
         <?php endforeach; ?>
     </section>
+    <script src="<?= get_stylesheet_directory_uri() . '/public/js/main.js' ?>"></script>
 <?php endwhile; endif; ?>
 <?php get_footer();

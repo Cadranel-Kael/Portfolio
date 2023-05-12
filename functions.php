@@ -64,14 +64,17 @@ load_theme_textdomain('kc', get_template_directory() . '/locales');
 
 function __kc(string $field)
 {
-    $base = '';
+    $base = '<div class="row">';
     $replacements = [
-        '::star::' => '<svg role="img" width="28" height="28"><use xlink:href="' . get_stylesheet_directory_uri() . '/public/images/sprite.svg#star--black"></use></svg>',
+        '::star-black::' => '<svg role="img" width="28" height="28"><use xlink:href="' . get_stylesheet_directory_uri() . '/public/images/sprite.svg#star--black"></use></svg>',
+        '::star-white::' => '<svg role="img" width="28" height="28"><use xlink:href="' . get_stylesheet_directory_uri() . '/public/images/sprite.svg#star--white"></use></svg>',
+        '<br>' => '&nbsp</div><div class="row">',
+        '<br/>' => '&nbsp</div><div class="row">',
     ];
 
-    foreach ($replacements as $key => $value) {
-        $base .= str_replace($key, $value, $field);
-    }
+    $base .= strtr($field, $replacements);
+
+    $base .= '</div>';
 
     return $base;
 }

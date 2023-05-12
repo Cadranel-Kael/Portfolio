@@ -1,33 +1,26 @@
 {
-  "name": "portfolio",
+  "name": "Portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A wp theme for kael.digital",
+  "main": "webpack.mix.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hepl-mmi/template-projet-examen.git"
   },
   "keywords": [],
   "author": "Kael Cadranel",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.5.3",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-connect": "^3.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^3.1.0",
-    "node-sass": "^8.0.0",
-    "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.14",
-    "grunt-ts": "^6.0.0-beta.22",
-    "pixrem": "^5.0.0"
-  },
-  "browserslist": [
-    "defaults"
-  ]
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.11",
+    "sass-loader": "^12.6.0",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3"
+  }
 }
