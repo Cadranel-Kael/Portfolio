@@ -1,6 +1,6 @@
 <?php get_header(); ?>
+<?php include_once "custom-mouse.php" ?>
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
-    <canvas id="mouse-canvas"></canvas>
     <section class="hero">
         <?php include_once "planet.php" ?>
         <div class="hero__pre"><?= get_field('pre') ?></div>
@@ -40,10 +40,19 @@
             <article class="projects__project project">
                 <h3 class="project__title"><?= get_field('title') ?></h3>
                 <div class="project__desc"><?= get_field('desc') ?></div>
-                <a class="project__link" href="<?= get_permalink(); ?>">Check <?= get_field('title') ?> project</a>
+                <a class="project__link" href="<?= get_permalink(); ?>">
+                    <span class="sr-only">Check <?= get_field('title') ?> project</span>
+                    <svg class="project__arrow" role="img" width="68.93" height="52">
+                        <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow"' ?>"/>
+                    </svg>
+                </a>
             </article>
         <?php endwhile; endif;
         wp_reset_postdata() ?>
+        <a href="#" class="projects__link">See more</a>
+        <svg class="about__separator" role="img" width="390" height="77">
+            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-projects"' ?>"/>
+        </svg>
     </section>
     <section class="faq">
         <h2 class="faq__title"><?= the_field('faq_title', false, false); ?></h2>

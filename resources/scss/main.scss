@@ -8,11 +8,12 @@ body {
   color: white;
   font-family: "Metropolis", sans-serif;
   font-weight: $weight-regular;
+  cursor: none;
 }
 
 h1, h2, h3 {
   font-family: "Roc Grotesk", sans-serif;
 }
 
-@import "nav";
+@import "nav/nav";
 @import "front/front";

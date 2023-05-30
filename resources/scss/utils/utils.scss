@@ -7,3 +7,15 @@
   white-space: nowrap;
   width: 1px;
 }
+
+.dt-only:not(:focus):not(:active) {
+  @media (max-width: 1000px) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}

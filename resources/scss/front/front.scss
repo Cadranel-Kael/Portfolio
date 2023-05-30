@@ -11,8 +11,9 @@
   width: 100vw;
   overflow: hidden;
   &__pre {
-    text-transform: uppercase;
+    //text-transform: uppercase;
     margin-bottom: 1rem;
+    font-weight: bold;
   }
   &__title {
     font-size: 4.375rem;
@@ -102,3 +103,5 @@
 
 @import "planet";
 @import "project";
+@import "faq";
+@import "canvas";

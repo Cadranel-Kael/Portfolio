@@ -1,0 +1,1 @@
+<canvas id="mouse-canvas" class="mouse-canvas"></canvas>

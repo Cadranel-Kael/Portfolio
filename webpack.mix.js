@@ -8,4 +8,12 @@ mix.ts('resources/ts/main.ts', 'js').sourceMaps()
         server: {
             baseDir: './'
         }
-    });
+    })
+    .options({
+    postCss: [
+        require('autoprefixer')({
+            overrideBrowserslist: ['last 2 versions'],
+            cascade: false
+        })
+    ]
+});

@@ -1,8 +1,11 @@
-import {Canvas} from "./base/Canvas";
+import {MouseCanvas} from "./MouseCanvas";
 
 function main() {
-    console.log('test');
-    const canvas = new Canvas(document.getElementById('mouse-canvas') as HTMLCanvasElement);
+    const canvas = new MouseCanvas(
+        document.getElementById('mouse-canvas') as HTMLCanvasElement,
+        {width: innerWidth, height: innerHeight
+    });
+
 }
 
 main();
