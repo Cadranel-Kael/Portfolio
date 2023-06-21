@@ -11,6 +11,7 @@
     <title><?= get_bloginfo('name'); ?> – <?= get_the_title(); ?></title>
 </head>
 <body>
+<?php include_once "custom-mouse.php" ?>
 <div class="sr-only">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
     <h1><?= get_field('page_title') ?></h1>
@@ -25,13 +26,13 @@
             <a title="back to the main page" href="<?= get_home_url(); ?>" class="nav__link">Kael Cadranel</a>
         </li>
     <?php foreach(kc_get_menu('main') as $link): ?>
-        <li class="nav__item dt-only" aria-hidden="true">
+        <li class="nav__item dt-only">
             <a href="<?= $link->href; ?>" class="nav__link"><?= $link->label; ?></a>
         </li>
     <?php endforeach; ?>
         <li class="nav_item burger-menu">
             <label for="burger-menu" class="sr-only">burger menu</label>
-            <input type="checkbox" name="menu" id="burger-menu" class="burger-menu__checkbox" aria-expanded="false">
+            <input type="checkbox" name="menu" id="burger-menu" class="burger-menu__checkbox clickable" aria-expanded="false">
             <div class="burger-menu__icon">
                 <div></div>
             </div>

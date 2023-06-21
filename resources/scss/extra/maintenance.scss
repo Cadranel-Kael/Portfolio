@@ -1,0 +1,20 @@
+.maintenance {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: 12.5625rem;
+  background: $secondary-color;
+  background-image: url("../images/bg-maintenance.svg");
+  background-size: cover;
+  &__title {
+    font-size: 2rem;
+    font-weight: $weight-extra-bold;
+    background: $secondary-color;
+  }
+  &__desc {
+    margin: 1.6875em 1rem 0;
+    line-height: 1.89;
+    background: $secondary-color;
+  }
+}

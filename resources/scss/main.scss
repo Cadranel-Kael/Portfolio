@@ -8,12 +8,37 @@ body {
   color: white;
   font-family: "Metropolis", sans-serif;
   font-weight: $weight-regular;
-  cursor: none;
+  position: relative;
 }
 
 h1, h2, h3 {
   font-family: "Roc Grotesk", sans-serif;
+  font-weight: $weight-regular;
+  line-height: 1.44;
 }
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  @media (min-width: 800px) {
+    font-size: 3rem;
+  }
+}
+
+strong {
+  font-weight: $weight-bold;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+section {
+  position: relative;
+}
+
 
 @import "nav/nav";
 @import "front/front";
+@import "extra/maintenance";
+@import "footer/footer";

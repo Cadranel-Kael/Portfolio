@@ -19,3 +19,46 @@
     width: 1px;
   }
 }
+
+.js {
+  cursor: none;
+  .js {
+    &--sr-only {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  }
+}
+
+.row {
+  display: block;
+}
+
+.separator {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  left: 0;
+  &--top {
+    top: 0;
+  }
+  &--translate-up {
+    transform: translateY(-1px);
+  }
+  &--bottom {
+    bottom: 0;
+  }
+  &--translate-down {
+    transform: translateY(1px);
+  }
+  &--relative {
+    position: relative;
+  }
+}

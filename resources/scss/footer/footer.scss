@@ -1,0 +1,44 @@
+.footer {
+  padding: 7.25rem 1rem 0;
+  max-width: 72.5rem;
+  box-sizing: border-box;
+  margin: auto;
+  @media (min-width: 800px) {
+    padding-top: 11.875rem;
+  }
+  &__socials{
+    display: flex;
+    margin-bottom: 2.75rem;
+    .socials {
+      &__title {
+        font-size: 1rem;
+        text-align: left;
+        margin-right: 0.875rem;
+      }
+      &__item {
+        font-size: 1.125rem;
+        list-style-type: none;
+        margin-bottom: 0.875rem;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      &__link {
+        text-decoration: none;
+        color: $primary-color;
+      }
+    }
+  }
+  &__small {
+    border-top: solid $primary-color 1px;
+    padding-top: 0.75rem;
+    font-size: 0.75rem;
+    &__copyright {
+      text-align: right;
+      &__row {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
