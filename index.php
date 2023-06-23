@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php include_once "custom-mouse.php"; ?>
 <?php include_once "fields.php" ?>
     <section class="hero">
         <?php include_once "planet.php"; ?>
@@ -98,7 +97,7 @@
     </svg>
     <section class="contact">
         <h2 class="contact__title"><?= $contact_title ?></h2>
-        <form class="contact__form form" action="">
+        <form class="contact__form form" method="POST" action="/">
             <div class="form__field clickable" id="name_field">
                 <label class="form__field__label" for="name"><?= $name_label ?></label>
                 <input class="form__field__input" type="text" id="name" name="name"

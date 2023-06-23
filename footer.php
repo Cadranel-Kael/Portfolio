@@ -16,6 +16,7 @@
         </small>
     </div>
 </footer>
+<?php include_once "custom-mouse.php" ?>
 <script src="<?= get_stylesheet_directory_uri() . '/public/js/main.js' ?>"></script>
 </body>
 </html>
