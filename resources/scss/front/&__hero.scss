@@ -1,0 +1,83 @@
+@import "planet";
+
+&__hero {
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 2rem;
+  padding: 30.17751479vh 1rem;
+  position: relative;
+  width: 100vw;
+  max-width: 1920px;
+  overflow: hidden;
+
+  .hero {
+    @media (min-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 17%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    &__pre {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      @media (min-width: 700px) {
+        font-size: min(2.5vw, 2.25rem);
+      }
+    }
+
+    &__title {
+      font-size: 4.375rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-align: left;
+      line-height: 1;
+      @media (min-width: 700px) {
+        font-size: min(13.88888889vw, 12.5rem);
+        margin-bottom: 0;
+      }
+
+      :last-child {
+        @media (min-width: 700px) {
+          text-align: right;
+          //transform: translateY(-10vh);
+        }
+      }
+    }
+
+    &__tagline {
+      line-height: 1.5;
+      max-width: 15rem;
+      font-weight: $weight-extra-bold;
+      @media (min-width: 700px) {
+        font-size: min(2.5vw, 2.25rem);
+        width: 19vw;
+        max-width: initial;
+      }
+    }
+
+    &__arrow {
+      transform-origin: left;
+      stroke: #fff;
+      stroke-width: 2px;
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      animation: 3s ease-in-out infinite float;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(90deg) translateX(-50%);
+    }
+    50% {
+      transform: translateY(0.7rem) rotate(90deg) translateX(-50%);
+    }
+    100% {
+      transform: translateY(0) rotate(90deg) translateX(-50%);
+    }
+  }
+}

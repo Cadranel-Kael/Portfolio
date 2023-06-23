@@ -1,0 +1,54 @@
+&__faq {
+  padding: 0 1rem;
+  @media (min-width: 800px) {
+    padding: 0;
+    margin: 8.8125rem auto 0;
+  }
+
+  .faq {
+    &__title {
+      margin: 2.5rem 0 1rem;
+      text-shadow: 1px 1px 2px $secondary-color;
+
+      abbr {
+        text-decoration: none;
+      }
+    }
+
+    &__container {
+      display: flex;
+      align-content: stretch;
+      gap: 0.125rem;
+      margin-bottom: 1.8125rem;
+      @media (min-width: 800px) {
+        margin: 0 auto 1.8125rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        width: min(56.9375rem, 100%);
+      }
+
+      &:last-of-type {
+        @media (min-width: 800px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__q-and-a {
+      flex-grow: 1;
+      border-bottom: $primary-color solid 4px;
+    }
+
+    &__question {
+      font-size: 1.25rem;
+      width: auto;
+    }
+
+    &__answer {
+      border-left: $primary-color solid 2px;
+      margin: 0.3125rem 0 0.8125rem;
+      padding-left: 1rem;
+      line-height: 1.83;
+    }
+  }
+}

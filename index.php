@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php include_once "fields.php" ?>
-    <section class="hero">
+<main class="front">
+    <section class="front__hero hero">
         <?php include_once "planet.php"; ?>
         <div class="hero__pre"><?= $pre ?></div>
         <h2 class="hero__title">
@@ -11,7 +12,7 @@
             <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow' ?>"/>
         </svg>
     </section>
-    <section class="about">
+    <section class="front__about about">
         <h2 class="about__title">
             <?= __kc($about_title); ?>
         </h2>
@@ -23,7 +24,7 @@
     <svg class="separator separator--translate-up" role="img" width="390" height="44.5">
         <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-1"' ?>"/>
     </svg>
-    <section class="projects">
+    <section class="front__projects projects">
         <h2 class="projects__title"><?= __kc($projects_title); ?></h2>
         <?php
         $projects = new WP_Query([
@@ -55,7 +56,7 @@
             <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-2"' ?>"/>
         </svg>
     </section>
-    <section class="qualifications">
+    <section class="front__qualifications qualifications">
         <h2 class="qualifications__title"><?= __kc($qualifications_title) ?></h2>
         <?php $qualifications = $qualification;
         foreach ($qualifications as $qualification): ?>
@@ -72,7 +73,7 @@
     <svg class="separator separator--translate-up" role="img" width="390" height="33">
         <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-3"' ?>"/>
     </svg>
-    <section class="faq">
+    <section class="front__faq faq">
         <h2 class="faq__title"><?= the_field('faq_title', false, false); ?></h2>
         <?php $faqs = $faq;
         $number = 0;
@@ -81,7 +82,7 @@
                 <span class="faq__star"><?= kc_star(20) ?></span>
                 <div class="faq__q-and-a">
                     <h3 class="faq__question clickable drop-down--question"><?= $faq['question'] ?></h3>
-                    <p class="faq__answer js--sr-only drop-down--answer" aria-expanded="true"><?= $faq['answer'] ?></p>
+                    <p class="faq__answer js--sr-only drop-down--answer clickable" aria-expanded="true"><?= $faq['answer'] ?></p>
                 </div>
                 <span class="faq__arrow clickable drop-down--button">
                         <svg role="img" width="22" height="29">
@@ -95,7 +96,7 @@
     <svg class="separator separator--relative separator--translate-down" role="img" width="390" height="31">
         <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-4"' ?>"/>
     </svg>
-    <section class="contact">
+    <section class="front__contact contact">
         <h2 class="contact__title"><?= $contact_title ?></h2>
         <form class="contact__form form" method="POST" action="/">
             <div class="form__field clickable" id="name_field">
@@ -136,4 +137,5 @@
             <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-5"' ?>"/>
         </svg>
     </section>
+</main>
 <?php get_footer();
