@@ -63,24 +63,36 @@ export class Canvas {
      * @param dimension - An optional parameter specifying the initial dimensions of the canvas.
      * */
     constructor(canvasElement: HTMLCanvasElement, dimension?: Dimension) {
+        let height = dimension.height;
+        let width = dimension.width;
+
         this.canvasElement = canvasElement;
         if (dimension !== undefined) {
-            this.height = dimension.height;
-            this.width = dimension.width;
+            height = dimension.height;
+            width = dimension.width;
         } else {
             this.autoDimension = true;
-            this.width = innerWidth;
-            this.height = window.innerHeight;
+            width = innerWidth;
+            height = window.innerHeight;
         }
         this.ctx = this.canvasElement.getContext('2d');
 
         if (this.autoDimension || this.autoDimension) {
             window.addEventListener('resize', () => {
                 if (this.autoDimension) {
-                    this.height = innerHeight;
-                    this.width = innerWidth;
+                    height = innerHeight;
+                    width = innerWidth;
                 }
             });
         }
+
+        this.canvasElement.style.width = dimension.width + "px";
+        this.canvasElement.style.height = dimension.height + "px";
+
+        const scale = window.devicePixelRatio; // <--- Change to 1 on retina screens to see blurry canvas.
+        this.width = dimension.width * scale;
+        this.height = dimension.height * scale;
+
+        this.ctx.scale(scale, scale);
     }
 }
