@@ -8,11 +8,13 @@
             <?= word_per_line($main_title) ?>
         </h2>
         <div class="hero__tagline"><?= $tagline ?></div>
-        <svg class="hero__arrow" role="img" width="68.93" height="52">
-            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow' ?>"/>
-        </svg>
+        <a href="#about">
+            <svg class="hero__arrow" role="img" width="68.93" height="52">
+                <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow' ?>"/>
+            </svg>
+        </a>
     </section>
-    <section class="front__about about">
+    <section class="front__about about" id="about">
         <h2 class="about__title">
             <?= __kc($about_title); ?>
         </h2>
