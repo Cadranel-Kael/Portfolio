@@ -36,10 +36,10 @@
                 <div class="burger-menu__icon">
                     <div></div>
                 </div>
-                <nav class="burger-menu__nav">
+                <div class="burger-menu__nav">
                     <a class="burger-menu__nav__language" href="#" hreflang="fr">FR</a>
                     <div class="burger-menu__nav__container">
-                        <h3 class="burger-menu__nav__container__title"><a href="<?= get_home_url(); ?>">Kael Cadranel</a></h3>
+                        <a class="burger-menu__nav__container__title"><a href="<?= get_home_url(); ?>">Kael Cadranel</a></a>
                         <ul>
                             <?php foreach(kc_get_menu('main') as $link): ?>
                                 <li class="nav__item">
@@ -48,7 +48,7 @@
                             <?php endforeach; ?>
                         </ul>
                     </div>
-                </nav>
+                </div>
             </li>
         </ul>
     </nav>
