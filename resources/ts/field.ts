@@ -8,18 +8,9 @@ export function connectField(field: Element, input: HTMLInputElement) {
 
 export function expandTextArea(textArea: HTMLTextAreaElement) {
     textArea.addEventListener('input', () => {
+        textArea.style.height = "";
         textArea.style.height = Math.min(textArea.scrollHeight, settings.field.textArea.maxHeight) + "px";
-    })
-    // textArea.addEventListener('focus', () => {
-    //     textArea.rows = 4;
-    // })
-    // textArea.addEventListener('focusout', () => {
-    //     if (textArea.value.length >= 30) {
-    //         textArea.rows = 4;
-    //     } else {
-    //         textArea.rows = 1;
-    //     }
-    // })
+    });
 }
 
 
