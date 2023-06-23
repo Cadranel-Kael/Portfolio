@@ -6,8 +6,7 @@ function main() {
     document.body.classList.add('js');
 
     const canvas = new MouseCanvas(
-        document.getElementById('mouse-canvas') as HTMLCanvasElement,
-        undefined
+        document.getElementById('mouse-canvas') as HTMLCanvasElement
     );
 
     settings.field.selectors.forEach((selector) => {
