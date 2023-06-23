@@ -88,10 +88,14 @@ export class Canvas {
                     this.canvasElement.style.height = innerHeight + "px";
                     height = innerHeight;
                     width = innerWidth;
+                    const scale = window.devicePixelRatio; // <--- Change to 1 on retina screens to see blurry canvas.
+                    this.width = width * scale;
+                    this.height = height * scale;
+
+                    this.ctx.scale(scale, scale);
                 }
             });
         }
-
 
         const scale = window.devicePixelRatio; // <--- Change to 1 on retina screens to see blurry canvas.
         this.width = width * scale;
