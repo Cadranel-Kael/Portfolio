@@ -124,7 +124,7 @@
             <div class="form__field form__field--message">
                 <label class="form__field__label form__field__label--message clickable"
                        for="message"><?= $message_label ?></label>
-                <textarea class="form__field__textarea" id="message" rows="4" cols="4"
+                <textarea class="form__field__textarea" id="message" rows="1" cols="4"
                           placeholder="<?= $message_placeholder ?>"></textarea>
             </div>
             <button class="form__field__submit" type="submit">

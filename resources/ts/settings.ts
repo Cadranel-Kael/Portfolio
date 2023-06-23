@@ -12,7 +12,10 @@ export const settings = {
             ['#email_field', '#email'],
             ['#phone_field', '#phone'],
             ['#company_field', '#company'],
-        ]
+        ],
+        textArea: {
+            maxHeight: 140,
+        }
     },
     dropDown: {
         faq: [
