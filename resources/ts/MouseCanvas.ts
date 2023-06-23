@@ -26,7 +26,7 @@ export class MouseCanvas extends Canvas implements Animatable {
     }
 
     draw(): void {
-        this.circles.forEach((circle)=>{
+        this.circles.forEach((circle) => {
             circle.draw();
         });
     }
@@ -36,11 +36,11 @@ export class MouseCanvas extends Canvas implements Animatable {
         this.circles[0].position.y = this.mouseY;
         let x = this.mouseX;
         let y = this.mouseY;
-        this.circles.forEach((circle, index)=> {
+        this.circles.forEach((circle, index) => {
             if (index !== 0) {
                 circle.position.x = x;
                 circle.position.y = y;
-                const nextCircle = this.circles[index+1] || this.circles[0];
+                const nextCircle = this.circles[index + 1] || this.circles[0];
                 x += (nextCircle.position.x - this.mouseX) * settings.mouse.length;
                 y += (nextCircle.position.y - this.mouseY) * settings.mouse.length;
             }
@@ -53,7 +53,7 @@ export class MouseCanvas extends Canvas implements Animatable {
             color: 'white',
             direction: 0,
             position: {x: this.mouseX, y: this.mouseY},
-            radius: (settings.mouse.numberOfTrail-index)*settings.mouse.size/settings.mouse.numberOfTrail,
+            radius: (settings.mouse.numberOfTrail - index) * settings.mouse.size / settings.mouse.numberOfTrail,
         }))
     }
 
@@ -66,20 +66,30 @@ export class MouseCanvas extends Canvas implements Animatable {
             this.mouseX = e.x;
             this.mouseY = e.y;
         })
+        this.refreshClickables();
+    }
+
+    refreshClickables() {
         for (const clickable of settings.mouse.clickables) {
             document.querySelectorAll(clickable).forEach((element) => {
                 element.addEventListener('mouseenter', () => {
                     this.resizeCircles(settings.mouse.resize);
                 })
                 element.addEventListener('mouseleave', () => {
-                    this.resizeCircles(1/settings.mouse.resize);
+                    this.resizeCircles(1 / settings.mouse.resize);
                 })
             })
         }
     }
 
+    resetRadius() {
+        this.circles.forEach((circle, index) => {
+            circle.radius = (settings.mouse.numberOfTrail - index) * settings.mouse.size / settings.mouse.numberOfTrail;
+        })
+    }
+
     resizeCircles(number: number) {
-        this.circles.forEach((circle)=> {
+        this.circles.forEach((circle) => {
             circle.radius *= number;
         })
     }

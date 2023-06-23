@@ -23,7 +23,7 @@ function main() {
 
 
     faqs.questions[0].forEach((v, index)=> {`§`
-        dropDown([faqs.questions[0][index], faqs.buttons[0][index]], faqs.answers[0][index])
+        dropDown([faqs.questions[0][index], faqs.buttons[0][index], faqs.answers[0][index]], faqs.answers[0][index])
     })
 }
 
