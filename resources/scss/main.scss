@@ -4,6 +4,10 @@
 @import "utils/canvas";
 @import "variables";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $secondary-color;
   color: white;
