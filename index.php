@@ -8,7 +8,7 @@
     <section class="front__hero hero">
         <?php get_template_part('planet'); ?>
         <div class="hero__pre"><?= $pre ?></div>
-        <h2 class="hero__title">
+        <h2 class="hero__title" itemprop="name">
             <?= word_per_line($main_title) ?>
         </h2>
         <div class="hero__tagline"><?= $tagline ?></div>
