@@ -21,6 +21,7 @@
       grid-area: title;
       align-self: end;
       margin-left: 1.25rem;
+      line-height: 1.25;
       @media (min-width: 800px) {
         font-size: 3rem;
         margin: 14.125rem 0 0 2.5rem;
@@ -41,7 +42,7 @@
       display: block;
       bottom: 0;
       position: relative;
-      margin: 2.5rem 0 0.625rem;
+      margin: 3.5625rem 0 0.625rem;
       @media (min-width: 800px) {
         position: absolute;
         margin: 6rem 0 0 1.25rem;
@@ -59,7 +60,7 @@
 
     &__desc {
       grid-area: desc;
-      margin-top: 0.875rem;
+      margin: 1.5rem 0 1rem;
       line-height: 1.6;
       @media (min-width: 800px) {
         max-width: 42.5rem;
