@@ -1,8 +1,12 @@
 <?php get_header(); ?>
-<?php include_once "fields.php" ?>
+<?php include_once 'partials/fields.php' ?>
+<?php if (isset($_POST['contact_form'])) {
+    extract($_SESSION['acf_fields']);
+} ?>
 <main class="front">
+    <canvas id="canvas-bg" class="canvas-bg"></canvas>
     <section class="front__hero hero">
-        <?php include_once "planet.php"; ?>
+        <?php get_template_part('planet'); ?>
         <div class="hero__pre"><?= $pre ?></div>
         <h2 class="hero__title">
             <?= word_per_line($main_title) ?>
@@ -100,41 +104,7 @@
     </svg>
     <section class="front__contact contact">
         <h2 class="contact__title"><?= $contact_title ?></h2>
-        <form class="contact__form form" method="POST" action="/">
-            <div class="form__field clickable" id="name_field">
-                <label class="form__field__label" for="name"><?= $name_label ?></label>
-                <input class="form__field__input" type="text" id="name" name="name"
-                       placeholder="<?= $name_placeholder ?>">
-            </div>
-            <div class="form__field clickable" id="email_field">
-                <label class="form__field__label" for="email"><?= $email_label ?></label>
-                <input class="form__field__input" type="text" id="email" name="email"
-                       placeholder="<?= $email_placeholder ?>">
-            </div>
-            <div class="form__field clickable" id="phone_field">
-                <label class="form__field__label" for="phone"><?= $phone_label ?></label>
-                <input class="form__field__input" type="text" id="phone" name="phone"
-                       placeholder="<?= $phone_placeholder ?>">
-            </div>
-            <div class="form__field clickable" id="company_field">
-                <label class="form__field__label" for="company"><?= $company_label ?></label>
-                <input class="form__field__input" type="text" id="company" name="company"
-                       placeholder="<?= $company_placeholder ?>">
-            </div>
-            <div class="form__field form__field--message">
-                <label class="form__field__label form__field__label--message clickable"
-                       for="message"><?= $message_label ?></label>
-                <textarea class="form__field__textarea" id="message" rows="1" cols="4"
-                          placeholder="<?= $message_placeholder ?>"></textarea>
-            </div>
-            <button class="form__field__submit" type="submit">
-                Send it off
-                <svg class="project__arrow" role="img" width="37" height="28">
-                    <use stroke="#fff" stroke-width="3px"
-                         xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow"' ?>"/>
-                </svg>
-            </button>
-        </form>
+        <?php include_once 'partials/contact-form.php'; ?>
         <svg class="separator separator--translate-up" role="img" width="390" height="38">
             <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-5"' ?>"/>
         </svg>
