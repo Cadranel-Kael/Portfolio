@@ -1,6 +1,8 @@
 import {MouseCanvas} from "./MouseCanvas";
 import {settings} from "./settings";
-import {connectField, dropDown, expandTextArea} from "./field";
+import {addParallax, connectField, dropDown, dynamicSpin, expandTextArea} from "./functions";
+import {Star} from "./star";
+import {Canvas} from "./canvas-framework/Canvas";
 
 function main() {
     document.body.classList.add('js');
@@ -26,6 +28,19 @@ function main() {
     faqs.questions[0].forEach((v, index)=> {`§`
         dropDown([faqs.questions[0][index], faqs.buttons[0][index], faqs.answers[0][index]], faqs.answers[0][index])
     })
+
+    addParallax(document.querySelector(settings.planet.planet), -0.4, 50);
+
+    const bgCanvas = new Canvas(document.querySelector('#canvas-bg'));
+
+    // addParallax(document.querySelector('#canvas-bg'), 1);
+    //
+    // for (let i = 0; i < window.innerHeight/50; i++) {
+    //     const star = new Star(bgCanvas, 'white');
+    //     star.draw();
+    // }
+
+
 }
 
 main();

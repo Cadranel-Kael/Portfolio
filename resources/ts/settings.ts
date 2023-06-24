@@ -23,5 +23,9 @@ export const settings = {
             'answer',
             'button'
         ]
+    },
+    planet: {
+        planet: '#planet',
+        bg: '.planet_clouds',
     }
 }

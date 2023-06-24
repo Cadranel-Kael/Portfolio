@@ -16,11 +16,9 @@ export function expandTextArea(textArea: HTMLTextAreaElement) {
 
 // @ts-ignore
 export function dropDown(clickables, content) {
-    console.log(clickables)
     // @ts-ignore
     clickables.forEach((clickable) => {
         clickable.addEventListener('click', () => {
-
             if (!clickable.classList.contains('opened')) {
                 clickable.classList.add('opened');
                 content.classList.add('opened');
@@ -33,6 +31,11 @@ export function dropDown(clickables, content) {
                 content.ariaExpanded = "false";
             }
         })
+    })
+}
 
+export function addParallax(target: HTMLElement, distance: number, baseTranslate = 0) {
+    window.addEventListener('scroll', () => {
+        target.style.transform = `translate3d(0px, calc(${window.scrollY * distance}px - ${baseTranslate}%), 0px `;
     })
 }

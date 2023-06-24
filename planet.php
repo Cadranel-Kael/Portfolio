@@ -1,4 +1,4 @@
-<svg class="planet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="485 0 716 716">
+<svg id="planet" class="planet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="485 0 716 716">
     <mask id="planet-mask" x="0" y="0" width="1205" height="714" maskUnits="userSpaceOnUse">
             <circle cx="842" cy="357" r="357" fill="#5bbac0"/>
     </mask>
