@@ -63,7 +63,7 @@ if (isset($_POST['contact_form'])) {
             <input class="form__field__input" type="text" id="full_name" name="full_name"
                    placeholder="<?= $name_placeholder ?>" value="<?= $_POST['full_name'] ?? '' ?>">
         </div>
-        <span class="form__field__error"><?= $errors['full_name'] ?? '' ?></span>
+        <span class="form__field__error" id="full_name-error"><?= $errors['full_name'] ?? '' ?></span>
     </div>
     <div class="form__field">
         <div class="form__field__container clickable" id="email_field">
@@ -71,7 +71,7 @@ if (isset($_POST['contact_form'])) {
             <input class="form__field__input" type="text" id="email" name="email"
                    placeholder="<?= $email_placeholder ?>" value="<?= $_POST['email'] ?? '' ?>">
         </div>
-        <span class="form__field__error"><?= $errors['email'] ?? '' ?></span>
+        <span class="form__field__error" id="email-error"><?= $errors['email'] ?? '' ?></span>
     </div>
     <div class="form__field">
         <div class="form__field__container clickable" id="phone_field">
@@ -79,7 +79,7 @@ if (isset($_POST['contact_form'])) {
             <input class="form__field__input" type="text" id="phone" name="phone"
                    placeholder="<?= $phone_placeholder ?>" value="<?= $_POST['phone'] ?? '' ?>">
         </div>
-        <span class="form__field__error"><?= $errors['phone'] ?? '' ?></span>
+        <span class="form__field__error" id="phone-error"><?= $errors['phone'] ?? '' ?></span>
     </div>
     <div class="form__field">
         <div class="form__field__container clickable" id="company_field">
@@ -87,16 +87,16 @@ if (isset($_POST['contact_form'])) {
             <input class="form__field__input" type="text" id="company" name="company"
                    placeholder="<?= $company_placeholder ?>" value="<?= $_POST['company'] ?? '' ?>">
         </div>
-        <span class="form__field__error"><?= $errors['company'] ?? '' ?></span>
+        <span class="form__field__error" id="company-error"><?= $errors['company'] ?? '' ?></span>
     </div>
     <div class="form__field form__field--message">
-        <div class="form__field__container form__field__container--message clickable">
+        <div class="form__field__container form__field__container--message clickable"  id="message_field">
             <label class="form__field__label form__field__label--message"
                    for="message"><?= $message_label ?></label>
             <textarea class="form__field__textarea" name="message" id="message" rows="1" cols="4"
                       placeholder="<?= $message_placeholder ?>"><?= $_POST['message'] ?? '' ?></textarea>
         </div>
-        <span class="form__field__error"><?= $errors['message'] ?? '' ?></span>
+        <span class="form__field__error" id="message-error"><?= $errors['message'] ?? '' ?></span>
     </div>
     <button class="form__field__submit" type="submit">
         Send it off

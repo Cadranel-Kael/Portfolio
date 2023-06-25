@@ -7,12 +7,13 @@ export const settings = {
         clickables: ['a', 'button', 'textarea', '.clickable'],
     },
     field: {
-        selectors: [
-            ['#name_field', '#name'],
-            ['#email_field', '#email'],
-            ['#phone_field', '#phone'],
-            ['#company_field', '#company'],
-        ],
+        selectors: {
+            'name': ['#name_field', '#full_name', '#full_name-error'],
+            'email': ['#email_field', '#email', '#email-error'],
+            'phone': ['#phone_field', '#phone', '#phone-error'],
+            'company': ['#company_field', '#company', '#company-error'],
+            'message': ['#message_field', '#message', '#message-error'],
+        },
         textArea: {
             maxHeight: 140,
         }

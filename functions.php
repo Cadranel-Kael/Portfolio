@@ -133,6 +133,11 @@ add_filter('the_content', 'word_per_line');
 
 function fields_to_var()
 {
-        $acf_fields = get_fields();
-        extract($acf_fields);
+    $acf_fields = get_fields();
+    extract($acf_fields);
 }
+
+/**
+ * This function displays the validation messages, the success message, the container of the validation messages, and the
+ * contact form.
+ */

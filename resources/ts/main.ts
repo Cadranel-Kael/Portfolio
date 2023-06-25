@@ -3,6 +3,7 @@ import {settings} from "./settings";
 import {addParallax, connectField, dropDown, expandTextArea} from "./functions";
 import {Star} from "./star";
 import {Canvas} from "./canvas-framework/Canvas";
+import {contactForm} from "./contact-form";
 
 function main() {
     document.body.classList.add('js');
@@ -11,7 +12,8 @@ function main() {
         document.getElementById('mouse-canvas') as HTMLCanvasElement
     );
 
-    settings.field.selectors.forEach((selector) => {
+
+    Object.values(settings.field.selectors).forEach((selector) => {
         const field = document.querySelector(selector[0]);
         const input = document.querySelector(selector[1]) as HTMLInputElement;
         connectField(field, input);
@@ -25,7 +27,8 @@ function main() {
 
     expandTextArea(document.getElementById('message') as HTMLTextAreaElement);
 
-    faqs.questions[0].forEach((v, index)=> {`§`
+    faqs.questions[0].forEach((v, index) => {
+        `§`
         dropDown([faqs.questions[0][index], faqs.buttons[0][index], faqs.answers[0][index]], faqs.answers[0][index])
     })
 
@@ -40,6 +43,7 @@ function main() {
     //     star.draw();
     // }
 
+    contactForm();
 
 }
 
