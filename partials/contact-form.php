@@ -8,7 +8,7 @@ $error_messages = [
 
 if (isset($_POST['contact_form'])) {
     $errors = [];
-    $success_message = '';
+
     // Sanitize the data
     $name = isset($_POST['full_name']) ? sanitize_text_field($_POST['full_name']) : '';
     $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
@@ -45,54 +45,64 @@ if (isset($_POST['contact_form'])) {
 
         wp_mail($mail, $subject, $mail_message);
 
-        $success_message = 'Your message has been successfully sent.';
+        $_SESSION['flash'] = 'Your message has been successfully sent.';
+        $_POST = '';
     }
 }
 
 // Display the success message
-if (strlen($success_message) > 0) {
-    echo '<div class="success-message">' . $success_message . '</div>';
-}
 ?>
-    <form id="contact" class="contact__form form" method="POST" action="<?= $_SERVER['REQUEST_URI'] . '#contact'; ?>">
+<span class="contact__success"><?= $_SESSION['flash'] ?? '' ?></span>
+<?php $_SESSION['flash'] = '' ?>
+<form id="contact" class="contact__form form" method="POST" action="<?= $_SERVER['REQUEST_URI'] . '#contact'; ?>">
 
-        <input type="hidden" name="contact_form">
-        <div class="form__field clickable" id="name_field">
+    <input type="hidden" name="contact_form">
+    <div class="form__field">
+        <div class="form__field__container clickable" id="name_field">
             <label class="form__field__label" for="full_name"><?= $name_label ?></label>
             <input class="form__field__input" type="text" id="full_name" name="full_name"
                    placeholder="<?= $name_placeholder ?>" value="<?= $_POST['full_name'] ?? '' ?>">
         </div>
         <span class="form__field__error"><?= $errors['full_name'] ?? '' ?></span>
-        <div class="form__field clickable" id="email_field">
+    </div>
+    <div class="form__field">
+        <div class="form__field__container clickable" id="email_field">
             <label class="form__field__label" for="email"><?= $email_label ?></label>
             <input class="form__field__input" type="text" id="email" name="email"
                    placeholder="<?= $email_placeholder ?>" value="<?= $_POST['email'] ?? '' ?>">
         </div>
         <span class="form__field__error"><?= $errors['email'] ?? '' ?></span>
-        <div class="form__field clickable" id="phone_field">
+    </div>
+    <div class="form__field">
+        <div class="form__field__container clickable" id="phone_field">
             <label class="form__field__label" for="phone"><?= $phone_label ?></label>
             <input class="form__field__input" type="text" id="phone" name="phone"
                    placeholder="<?= $phone_placeholder ?>" value="<?= $_POST['phone'] ?? '' ?>">
         </div>
         <span class="form__field__error"><?= $errors['phone'] ?? '' ?></span>
-        <div class="form__field clickable" id="company_field">
+    </div>
+    <div class="form__field">
+        <div class="form__field__container clickable" id="company_field">
             <label class="form__field__label" for="company"><?= $company_label ?></label>
             <input class="form__field__input" type="text" id="company" name="company"
                    placeholder="<?= $company_placeholder ?>" value="<?= $_POST['company'] ?? '' ?>">
         </div>
         <span class="form__field__error"><?= $errors['company'] ?? '' ?></span>
-        <div class="form__field form__field--message">
+    </div>
+    <div class="form__field form__field--message">
+        <div class="form__field__container form__field__container--message">
             <label class="form__field__label form__field__label--message clickable"
                    for="message"><?= $message_label ?></label>
             <textarea class="form__field__textarea" name="message" id="message" rows="1" cols="4"
                       placeholder="<?= $message_placeholder ?>"><?= $_POST['message'] ?? '' ?></textarea>
         </div>
         <span class="form__field__error"><?= $errors['message'] ?? '' ?></span>
-        <button class="form__field__submit" type="submit">
-            Send it off
-            <svg class="project__arrow" role="img" width="37" height="28">
-                <use stroke="#fff" stroke-width="3px"
-                     xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow"' ?>"/>
-            </svg>
-        </button>
-    </form>
+    </div>
+    <button class="form__field__submit" type="submit">
+        Send it off
+        <svg class="project__arrow" role="img" width="37" height="28">
+            <use stroke="#fff" stroke-width="3px"
+                 xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow"' ?>"/>
+        </svg>
+    </button>
+</form>

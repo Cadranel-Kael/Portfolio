@@ -1,6 +1,6 @@
 import {MouseCanvas} from "./MouseCanvas";
 import {settings} from "./settings";
-import {addParallax, connectField, dropDown, dynamicSpin, expandTextArea} from "./functions";
+import {addParallax, connectField, dropDown, expandTextArea} from "./functions";
 import {Star} from "./star";
 import {Canvas} from "./canvas-framework/Canvas";
 
