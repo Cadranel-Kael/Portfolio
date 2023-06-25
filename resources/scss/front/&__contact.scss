@@ -22,13 +22,13 @@
       .form {
         &__field {
           width: 100%;
-          justify-content: space-between;
           margin-bottom: 1rem;
           @media (min-width: 800px) {
             grid-column: 1/2;
           }
           &__container {
             display: flex;
+            justify-content: space-between;
             border-bottom: $secondary-color solid 1px;
             padding: 0 0.5em 0.375rem;
             margin-bottom: 0.5rem;

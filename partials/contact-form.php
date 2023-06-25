@@ -90,8 +90,8 @@ if (isset($_POST['contact_form'])) {
         <span class="form__field__error"><?= $errors['company'] ?? '' ?></span>
     </div>
     <div class="form__field form__field--message">
-        <div class="form__field__container form__field__container--message">
-            <label class="form__field__label form__field__label--message clickable"
+        <div class="form__field__container form__field__container--message clickable">
+            <label class="form__field__label form__field__label--message"
                    for="message"><?= $message_label ?></label>
             <textarea class="form__field__textarea" name="message" id="message" rows="1" cols="4"
                       placeholder="<?= $message_placeholder ?>"><?= $_POST['message'] ?? '' ?></textarea>
