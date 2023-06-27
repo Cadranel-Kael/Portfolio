@@ -5,7 +5,10 @@
   height: 100vh;
   font-family: "Roc Grotesk", sans-serif;
   font-size: 2rem;
-  padding: 30.17751479vh 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 9.375vw;
   position: relative;
   width: 100vw;
   max-width: 1920px;
@@ -24,20 +27,28 @@
     &__pre {
       margin-bottom: 1rem;
       font-weight: bold;
+      animation: ease-in-out 1s appear--pre;
       @media (min-width: 700px) {
         font-size: min(2.5vw, 2.25rem);
       }
     }
 
     &__title {
+
       font-size: 4.375rem;
       margin-bottom: 1rem;
       font-weight: bold;
       text-align: left;
+      overflow: hidden;
       line-height: 1;
+      animation: 1s ease-in-out appear--title;
       @media (min-width: 700px) {
         font-size: min(13.88888889vw, 12.5rem);
         margin-bottom: 0;
+      }
+      .row {
+
+
       }
 
       :last-child {
@@ -67,6 +78,32 @@
       bottom: 2rem;
       left: 50%;
       animation: 3s ease-in-out infinite float;
+    }
+  }
+
+  @keyframes appear--title {
+    //0% {
+    //  transform: translateY(200%);
+    //}
+    //40%, 60% {
+    //  transform: translateY(100%);
+    //}
+    //100% {
+    //  transform: translateY(0);
+    //}
+    0% {
+      transform: translateY(-20%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes appear--pre {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
 

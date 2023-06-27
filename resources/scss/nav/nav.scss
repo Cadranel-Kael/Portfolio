@@ -20,6 +20,15 @@
     top: 1rem;
     right: 2rem;
     z-index: 3;
+    @media (min-width: 1000px) {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
     &__checkbox {
       position: absolute;
       top: 0;

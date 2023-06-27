@@ -6,6 +6,7 @@
   top: 50%;
   left: 33%;
   transform: translateY(-50%);
+  animation: appear--planet 0.5s ease-in-out;
   &__first {
     animation: linear 10s infinite rotate;
   }
@@ -20,5 +21,14 @@
   }
   100% {
     transform: translateX(68%) translateZ(0);
+  }
+}
+
+@keyframes appear--planet {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
   }
 }
