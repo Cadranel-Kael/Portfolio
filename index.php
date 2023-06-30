@@ -71,9 +71,9 @@
                         <p class="qualifications__qualification__school"><?= $qualification['school'] ?>,</p>
                         <p class="qualifications__qualification__location"><?= $qualification['location'] ?></p>
                     </div>
-                    <div class="description">
-                        <p><?= $qualification['desc'] ?></p>
-                    </div>
+                    <p class="desc">
+                        <?= $qualification['desc'] ?>
+                    </p>
                 </article>
             <?php endforeach; ?>
         </section>
