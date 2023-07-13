@@ -5,29 +5,92 @@
   @media (min-width: 800px) {
     padding: 0 8.75rem 1.4375rem;
   }
+
   .qualifications {
     &__qualification {
+      @media (min-width: 1000px) {
+        display: flex;
+        gap: 2.5625rem;
+        &:nth-child(3n) {
+          flex-direction: row-reverse;
+
+          .qualifications__qualification {
+            &__main {
+              text-align: left;
+            }
+
+            &__desc {
+              border: none;
+              border-right: solid 2px $secondary-color;
+              padding: 0;
+              padding-right: 1.25rem;
+            }
+          }
+
+        }
+        > * {
+          width: 50%;
+        }
+      }
+
       &:first-of-type {
         margin-top: 1.875rem;
       }
+
       &:not(:last-of-type) {
         margin-bottom: 3.125rem;
       }
+
       &__row {
         display: flex;
-        font-size: 1.25rem;
         line-height: 1.125;
         margin-bottom: 0.5rem;
+        @media (min-width: 1000px) {
+          flex-direction: column;
+        }
       }
+
+      &__title {
+        font-size: 1.25rem;
+        @media (min-width: 1000px) {
+          font-size: 2.25rem;
+        }
+      }
+
       &__year {
-        text-align: right;
+        font-size: 1.25rem;
+        @media (max-width: 999px) {
+          text-align: right;
+        }
+        @media (min-width: 1000px) {
+          font-size: 2.25rem;
+        }
       }
+
       &__school {
         color: #707070;
         margin-bottom: 0.25rem;
       }
+
       &__location {
         color: #707070;
+      }
+
+      &__main {
+        @media (min-width: 1000px) {
+          text-align: right;
+        }
+      }
+
+      &__desc {
+        border-left: solid 2px $secondary-color;
+        padding-left: 1.25rem;
+        margin-top: 1.75rem;
+        line-height: 1.6;
+        @media (min-width: 1000px) {
+          margin-top: 0;
+          font-size: 1.125rem;
+        }
       }
     }
   }

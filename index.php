@@ -63,7 +63,7 @@
             <?php $qualifications = $qualification;
             foreach ($qualifications as $qualification): ?>
                 <article class="qualifications__qualification">
-                    <div>
+                    <div class="qualifications__qualification__main">
                         <div class="qualifications__qualification__row">
                             <h3 class="qualifications__qualification__title"><?= $qualification['title'] ?></h3>
                             <p class="qualifications__qualification__year"><?= $qualification['year'] ?></p>
@@ -71,7 +71,7 @@
                         <p class="qualifications__qualification__school"><?= $qualification['school'] ?>,</p>
                         <p class="qualifications__qualification__location"><?= $qualification['location'] ?></p>
                     </div>
-                    <p class="desc">
+                    <p class="qualifications__qualification__desc">
                         <?= $qualification['desc'] ?>
                     </p>
                 </article>

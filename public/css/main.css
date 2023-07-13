@@ -656,6 +656,21 @@ body {
     padding: 0 0 1.5rem 16.1875rem;
   }
 }
+@media (min-width: 1000px) {
+  .front__projects .projects__project {
+    opacity: 0.7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    scale: 0.8;
+  }
+}
+@media (min-width: 1000px) {
+  .front__projects .projects__project:hover {
+    opacity: 1;
+    scale: 1;
+  }
+}
 .front__projects .projects__project:last-of-type {
   border-bottom: white 4px solid;
 }
@@ -746,6 +761,29 @@ body {
     padding: 0 8.75rem 1.4375rem;
   }
 }
+@media (min-width: 1000px) {
+  .front__qualifications .qualifications__qualification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.5625rem;
+  }
+  .front__qualifications .qualifications__qualification:nth-child(3n) {
+    flex-direction: row-reverse;
+  }
+  .front__qualifications .qualifications__qualification:nth-child(3n) .qualifications__qualification__main {
+    text-align: left;
+  }
+  .front__qualifications .qualifications__qualification:nth-child(3n) .qualifications__qualification__desc {
+    border: none;
+    border-right: solid 2px #1B1B1B;
+    padding: 0;
+    padding-right: 1.25rem;
+  }
+  .front__qualifications .qualifications__qualification > * {
+    width: 50%;
+  }
+}
 .front__qualifications .qualifications__qualification:first-of-type {
   margin-top: 1.875rem;
 }
@@ -756,12 +794,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.25rem;
   line-height: 1.125;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 1000px) {
+  .front__qualifications .qualifications__qualification__row {
+    flex-direction: column;
+  }
+}
+.front__qualifications .qualifications__qualification__title {
+  font-size: 1.25rem;
+}
+@media (min-width: 1000px) {
+  .front__qualifications .qualifications__qualification__title {
+    font-size: 2.25rem;
+  }
+}
 .front__qualifications .qualifications__qualification__year {
-  text-align: right;
+  font-size: 1.25rem;
+}
+@media (max-width: 999px) {
+  .front__qualifications .qualifications__qualification__year {
+    text-align: right;
+  }
+}
+@media (min-width: 1000px) {
+  .front__qualifications .qualifications__qualification__year {
+    font-size: 2.25rem;
+  }
 }
 .front__qualifications .qualifications__qualification__school {
   color: #707070;
@@ -769,6 +829,23 @@ body {
 }
 .front__qualifications .qualifications__qualification__location {
   color: #707070;
+}
+@media (min-width: 1000px) {
+  .front__qualifications .qualifications__qualification__main {
+    text-align: right;
+  }
+}
+.front__qualifications .qualifications__qualification__desc {
+  border-left: solid 2px #1B1B1B;
+  padding-left: 1.25rem;
+  margin-top: 1.75rem;
+  line-height: 1.6;
+}
+@media (min-width: 1000px) {
+  .front__qualifications .qualifications__qualification__desc {
+    margin-top: 0;
+    font-size: 1.125rem;
+  }
 }
 .front__contact {
   background: #fff;
