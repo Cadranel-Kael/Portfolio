@@ -40,7 +40,7 @@
             if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
                 <article class="projects__project project">
                     <h3 class="project__title"><?= get_field('title') ?></h3>
-                    <div class="project__desc"><?= get_field('desc') ?></div>
+                    <div class="project__desc"><?= get_field('tag') ?></div>
                     <a class="project__link" href="<?= get_permalink(); ?>">
                         <span>View Case <span class="sr-only">(<?= get_field('title') ?>)</span></span>
                     </a>
