@@ -138,6 +138,20 @@ function fields_to_var()
 }
 
 /**
- * This function displays the validation messages, the success message, the container of the validation messages, and the
- * contact form.
+ * Custom function to insert an image with custom classes.
+ *
+ * @param int    $attachment_id ID of the image attachment.
+ * @param string $size          Image size (e.g., 'thumbnail', 'medium', 'large', 'full').
+ * @param array  $classes       Array of custom classes to be added to the image element.
  */
+function kc_insert_image($attachment_id, $size = 'thumbnail', $classes = array()) {
+    $image = wp_get_attachment_image($attachment_id, $size);
+
+    // Add custom classes to the image element
+    $class_string = implode(' ', $classes);
+    $image_with_classes = str_replace('<img', '<img class="' . esc_attr($class_string) . '"', $image);
+
+    echo $image_with_classes;
+}
+
+

@@ -645,14 +645,20 @@ body {
   gap: 0.75rem;
   align-items: center;
 }
+@media (min-width: 1000px) {
+  .front__projects .projects__link {
+    margin-right: 10%;
+  }
+}
 .front__projects .projects__project {
   border-top: white 4px solid;
   padding: 0 1rem 1.5rem;
   position: relative;
+  animation: ease-in-out 3s appear-from-side--right;
 }
 @media (min-width: 800px) {
   .front__projects .projects__project {
-    padding: 0 1.25rem 1.5rem;
+    padding: 1.5rem 1.25rem 1.5rem 20rem;
   }
 }
 @media (min-width: 1000px) {
@@ -667,6 +673,13 @@ body {
 }
 .front__projects .projects__project:nth-child(3n) {
   flex-direction: row-reverse;
+  padding-left: 0;
+  padding-right: 20rem;
+  animation: ease-in-out 3s appear-from-side--left;
+}
+.front__projects .projects__project:nth-child(3n) .project__image {
+  left: initial;
+  right: 0;
 }
 .front__projects .projects__project:last-of-type {
   border-bottom: white 4px solid;
@@ -676,10 +689,27 @@ body {
   font-size: 2.5rem;
   margin-bottom: 0.8125rem;
 }
+.front__projects .projects__project .project__image {
+  display: none;
+}
+@media (min-width: 800px) {
+  .front__projects .projects__project .project__image {
+    display: initial;
+    height: calc(100% + 8px);
+    width: max(8.375rem, auto);
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    z-index: 2;
+  }
+}
 .front__projects .projects__project .project__desc {
   line-height: 1.6;
   padding-bottom: 0.625rem;
-  max-width: 35rem;
+  max-width: 12.5rem;
+  text-align: center;
 }
 .front__projects .projects__project .project__link {
   display: -webkit-inline-box;
@@ -702,6 +732,26 @@ body {
 .front__projects .projects__project .project__link:hover {
   color: #fff;
   background: #158188;
+}
+@keyframes appear-from-side--right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear-from-side--left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .front__faq {
   padding: 0 1rem;
