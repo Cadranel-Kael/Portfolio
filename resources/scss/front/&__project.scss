@@ -1,17 +1,18 @@
 &__projects {
   position: relative;
   padding-bottom: 1.4375rem;
+  overflow: hidden;
   @media (min-width: 800px) {
     padding-bottom: 12rem;
   }
 
   .projects {
     &__title {
+      text-shadow: 1px 1px 2px $secondary-color;
       text-align: center;
       font-weight: $weight-medium;
       margin: 3.75rem auto 0;
       max-width: 22rem;
-      text-shadow: 1px 1px 2px $secondary-color;
       @media (min-width: 700px) {
         margin: 15.9375rem 0 2.375rem;
         max-width: initial;
@@ -67,6 +68,7 @@
 
       .project {
         &__title {
+          text-shadow: 1px 1px 2px $secondary-color;
           font-family: "Roc Grotesk Wide", sans-serif;
           font-size: 2.5rem;
           margin-bottom: 0.8125rem;
@@ -87,6 +89,7 @@
         }
 
         &__desc {
+          text-shadow: 1px 1px 2px $secondary-color;
           line-height: 1.6;
           padding-bottom: 0.625rem;
           max-width: 12.5rem;

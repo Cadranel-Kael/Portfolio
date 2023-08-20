@@ -1,0 +1,23 @@
+.project {
+  font-size: 1.125rem;
+
+  &__head {
+    .head {
+      &__title {
+        font-family: "Roc Grotesk Wide", sans-serif;
+        font-size: 6rem;
+        font-weight: $weight-bold;
+      }
+
+      &__tag {
+        font-family: "Roc Grotesk", sans-serif;
+        font-size: 2rem;
+        font-weight: $weight-bold;
+      }
+
+      &__desc {
+
+      }
+    }
+  }
+}

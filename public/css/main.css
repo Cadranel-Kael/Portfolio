@@ -390,6 +390,15 @@ body {
   margin: auto;
 }
 
+.front__bg {
+  position: fixed;
+  z-index: -100;
+  height: auto;
+  width: 90%;
+  left: 5%;
+  top: 5%;
+}
+
 .front .planet {
   position: absolute;
   z-index: -1;
@@ -609,6 +618,7 @@ body {
 .front__projects {
   position: relative;
   padding-bottom: 1.4375rem;
+  overflow: hidden;
 }
 @media (min-width: 800px) {
   .front__projects {
@@ -616,11 +626,11 @@ body {
   }
 }
 .front__projects .projects__title {
+  text-shadow: 1px 1px 2px #1B1B1B;
   text-align: center;
   font-weight: 500;
   margin: 3.75rem auto 0;
   max-width: 22rem;
-  text-shadow: 1px 1px 2px #1B1B1B;
 }
 @media (min-width: 700px) {
   .front__projects .projects__title {
@@ -685,6 +695,7 @@ body {
   border-bottom: white 4px solid;
 }
 .front__projects .projects__project .project__title {
+  text-shadow: 1px 1px 2px #1B1B1B;
   font-family: "Roc Grotesk Wide", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 0.8125rem;
@@ -706,6 +717,7 @@ body {
   }
 }
 .front__projects .projects__project .project__desc {
+  text-shadow: 1px 1px 2px #1B1B1B;
   line-height: 1.6;
   padding-bottom: 0.625rem;
   max-width: 12.5rem;
@@ -755,6 +767,7 @@ body {
 }
 .front__faq {
   padding: 0 1rem;
+  text-shadow: 1px 1px 2px #1B1B1B;
 }
 @media (min-width: 800px) {
   .front__faq {
@@ -1014,6 +1027,7 @@ body {
   max-width: 72.5rem;
   box-sizing: border-box;
   margin: auto;
+  text-shadow: 1px 1px 2px #1B1B1B;
 }
 @media (min-width: 800px) {
   .footer {
@@ -1054,4 +1068,18 @@ body {
 .footer__small__copyright__row {
   display: block;
   margin-bottom: 0.5rem;
+}
+
+.project {
+  font-size: 1.125rem;
+}
+.project__head .head__title {
+  font-family: "Roc Grotesk Wide", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+}
+.project__head .head__tag {
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
 }

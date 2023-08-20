@@ -45,6 +45,9 @@ function main() {
 
     contactForm();
 
+    addParallax(document.getElementById('bg-stars-1'), -0.2, 0)
+    addParallax(document.getElementById('bg-stars-2'), -0.1, 0)
+
 }
 
 main();
