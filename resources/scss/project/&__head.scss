@@ -1,0 +1,31 @@
+&__head {
+  margin: 7.375rem 1rem 1.1875rem;
+
+  .head {
+    &__title {
+      font-family: "Roc Grotesk Wide", sans-serif;
+      font-size: 2rem;
+      font-weight: $weight-bold;
+
+      @media (min-width: 700px) {
+        font-size: 6rem;
+      }
+    }
+
+    &__tag {
+      font-family: "Roc Grotesk", sans-serif;
+      font-weight: $weight-bold;
+      text-align: center;
+      display: block;
+      margin-bottom: 1.125rem;
+      @media (min-width: 700px) {
+        font-size: 2rem;
+      }
+    }
+
+    &__desc {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+}

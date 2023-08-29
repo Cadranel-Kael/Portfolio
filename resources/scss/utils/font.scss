@@ -48,3 +48,10 @@
   font-weight: $weight-regular;
   src: url("../fonts/metropolis-regular.otf");
 }
+
+// Bold
+@font-face {
+  font-family: "Metroplis";
+  font-weight: $weight-bold;
+  src: url("../fonts/metropolis-bold.otf");
+}

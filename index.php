@@ -5,8 +5,8 @@
 } ?>
     <main class="front">
         <canvas id="canvas-bg" class="canvas-bg"></canvas>
-        <img class="front__bg" id="bg-stars-1" src="<?= get_stylesheet_directory_uri() . '/public/images/stars_layer_1.svg' ?>" alt="">
-        <img class="front__bg" id="bg-stars-2" src="<?= get_stylesheet_directory_uri() . '/public/images/stars_layer_3.png' ?>" alt="">
+        <img class="star-bg" id="bg-stars-1" src="<?= get_stylesheet_directory_uri() . '/public/images/stars_layer_1.svg' ?>" alt="">
+        <img class="star-bg" id="bg-stars-2" src="<?= get_stylesheet_directory_uri() . '/public/images/stars_layer_3.png' ?>" alt="">
         <section class="front__hero hero">
             <?php get_template_part('planet'); ?>
             <div class="hero__pre"><?= $pre ?></div>

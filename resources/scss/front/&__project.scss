@@ -41,7 +41,7 @@
       padding: 0 1rem 1.5rem;
       position: relative;
       animation: ease-in-out 3s appear-from-side--right;
-      @media (min-width: 800px) {
+      @media (min-width: 700px) {
         padding: 1.5rem 1.25rem 1.5rem 20rem;
       }
       @media (min-width: 1000px) {
@@ -52,14 +52,16 @@
       }
 
       &:nth-child(3n) {
-        flex-direction: row-reverse;
-        padding-left: 0;
-        padding-right: 20rem;
-        animation: ease-in-out 3s appear-from-side--left;
-        .project__image {
-          left: initial;
-          right: 0;
+        @media (min-width: 700px) {
+          flex-direction: row-reverse;
+          padding-left: 0;
+          padding-right: 20rem;
+          .project__image {
+            left: initial;
+            right: 0;
+          }
         }
+        animation: ease-in-out 3s appear-from-side--left;
       }
 
       &:last-of-type {
@@ -89,11 +91,13 @@
         }
 
         &__desc {
-          text-shadow: 1px 1px 2px $secondary-color;
-          line-height: 1.6;
-          padding-bottom: 0.625rem;
-          max-width: 12.5rem;
-          text-align: center;
+          @media (min-width: 700px) {
+            text-shadow: 1px 1px 2px $secondary-color;
+            line-height: 1.6;
+            padding-bottom: 0.625rem;
+            max-width: 12.5rem;
+            text-align: center;
+          }
         }
 
         &__link {

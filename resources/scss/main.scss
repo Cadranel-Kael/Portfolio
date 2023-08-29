@@ -47,6 +47,18 @@ section {
   position: relative;
 }
 
+.star-bg {
+  display: none;
+  @media (min-width: 700px) {
+    display: initial;
+    position: fixed;
+    z-index: -100;
+    height: auto;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+  }
+}
 
 @import "nav/nav";
 @import "front/front";

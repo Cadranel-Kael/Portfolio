@@ -1,0 +1,25 @@
+&__overview {
+  padding: 0 1rem;
+  .overview {
+    &__title {
+
+    }
+
+    &__list {
+      text-align: center;
+      line-height: 1.6;
+
+      .list {
+        &__item {
+          margin-bottom: 3rem;
+          &__title {
+            font-weight: $weight-bold;
+            font-family: "Metroplis", sans-serif;
+          }
+
+
+        }
+      }
+    }
+  }
+}
