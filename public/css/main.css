@@ -961,6 +961,7 @@ body {
   flex-grow: 1;
   margin-top: 2.5rem;
   max-width: 56.9375rem;
+  position: relative;
 }
 @media (min-width: 800px) {
   .front__contact .contact__form.form {
@@ -1025,7 +1026,7 @@ body {
   gap: 0.75rem;
   position: absolute;
   bottom: -3.9375rem;
-  right: 1rem;
+  right: 0rem;
 }
 .front .mouse-canvas {
   position: fixed;
