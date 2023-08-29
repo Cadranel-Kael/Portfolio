@@ -2,7 +2,7 @@
   position: relative;
   padding-bottom: 1.4375rem;
   overflow: hidden;
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     padding-bottom: 12rem;
   }
 
@@ -54,7 +54,7 @@
       &:nth-child(3n) {
         @media (min-width: 700px) {
           flex-direction: row-reverse;
-          padding-left: 0;
+          padding-left: 1.5rem;
           padding-right: 20rem;
           .project__image {
             left: initial;
@@ -78,7 +78,7 @@
 
         &__image {
           display: none;
-          @media (min-width: 800px) {
+          @media (min-width: 700px) {
             display: initial;
             height: calc(100% + 8px);
             width: max(8.375rem, auto);
@@ -91,6 +91,7 @@
         }
 
         &__desc {
+          margin-bottom: 1rem;
           @media (min-width: 700px) {
             text-shadow: 1px 1px 2px $secondary-color;
             line-height: 1.6;

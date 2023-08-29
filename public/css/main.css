@@ -646,7 +646,7 @@ body {
   padding-bottom: 1.4375rem;
   overflow: hidden;
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .front__projects {
     padding-bottom: 12rem;
   }
@@ -713,7 +713,7 @@ body {
 @media (min-width: 700px) {
   .front__projects .projects__project:nth-child(3n) {
     flex-direction: row-reverse;
-    padding-left: 0;
+    padding-left: 1.5rem;
     padding-right: 20rem;
   }
   .front__projects .projects__project:nth-child(3n) .project__image {
@@ -733,7 +733,7 @@ body {
 .front__projects .projects__project .project__image {
   display: none;
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .front__projects .projects__project .project__image {
     display: initial;
     height: calc(100% + 8px);
@@ -745,6 +745,9 @@ body {
     top: -4px;
     z-index: 2;
   }
+}
+.front__projects .projects__project .project__desc {
+  margin-bottom: 1rem;
 }
 @media (min-width: 700px) {
   .front__projects .projects__project .project__desc {
