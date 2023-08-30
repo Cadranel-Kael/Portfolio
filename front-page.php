@@ -83,7 +83,7 @@
             <?php endforeach; ?>
         </section>
         <svg class="separator separator--translate-up" role="img" width="390" height="33">
-            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-3"' ?>"/>
+            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-3' ?>"/>
         </svg>
         <section class="front__faq faq">
             <h2 class="faq__title"><?= the_field('faq_title', false, false); ?></h2>
