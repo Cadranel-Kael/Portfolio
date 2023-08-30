@@ -2,10 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-        <symbol xmlns="http://www.w3.org/2000/svg" id="arrow" viewBox="0 0 41.04 31">
-            <path d="m0,15.5h41m0,0c-5.21-.22-15.64-3.64-15.64-15.5m15.64,15.5c-5.21.15-15.64,3.46-15.64,15.5"/>
-        </symbol>
-        <symbol id="separator-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 44.5">
+        <symbol id="separator-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 44.5">
             <path style="fill: #fff" d="m390,44.5L0,0h390v44.5Z"/>
         </symbol>
         <symbol id="star--white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 28">
@@ -14,8 +11,23 @@
         <symbol id="star--black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 28">
             <path style="fill: #1B1B1B" d="m9.64,9.96L13.5,0l3.86,9.96,9.64,3.98-9.64,3.98-3.86,10.07-3.86-10.07L0,13.94l9.64-3.98Z"/>
         </symbol>
-        <symbol id="separator-projects" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 77">
+        <symbol id="separator-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 77">
             <path fill="#fff" d="m0,77L390,0v77H0Z"/>
+        </symbol>
+        <symbol id="separator-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 33">
+            <path fill="#fff" d="m390,0H0l390,33V0Z"/>
+        </symbol>
+        <symbol id="simple-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 29.12">
+            <path stroke="#fff" stroke-width="2px" d="m20.99.06c.32,5.16-5.09,14.39-20.99,14.39,15.89,0,21.29,9.37,20.97,14.61"/>
+        </symbol>
+        <symbol id="separator-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 31">
+            <path fill="#fff" d="m390,0L0,31l390-.26V0Z"/>
+        </symbol>
+        <symbol id="separator-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 38">
+            <path fill="#fff" d="m390,0L0,38V0h390Z"/>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="arrow" viewBox="0 0 39.02 39">
+            <path stroke="#fff" stroke-width="3px" fill="none" class="cls-1" d="m0,19.5h38.95m0,0c-6.35-.28-19.05-4.58-19.05-19.5m19.05,19.5c-6.35.19-19.05,4.35-19.05,19.5"/>
         </symbol>
     </defs>
 </svg>

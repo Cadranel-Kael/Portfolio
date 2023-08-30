@@ -45,9 +45,9 @@ add_image_size('animal_thumbnail', 400, 400, true);
 // Enregistrer un custom post type :
 function kc_register_custom_post_types()
 {
-    register_post_type('projects',
+    register_post_type('project',
         [
-            'label' => 'Projects',
+            'label' => 'Project',
             'description' => 'My projects',
             'public' => true,
             'menu_position' => 20,

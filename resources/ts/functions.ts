@@ -15,18 +15,20 @@ export function expandTextArea(textArea: HTMLTextAreaElement) {
 
 
 // @ts-ignore
-export function dropDown(clickables, content) {
+export function dropDown(clickables, content, button) {
     // @ts-ignore
     clickables.forEach((clickable) => {
         clickable.addEventListener('click', () => {
             if (!clickable.classList.contains('opened')) {
                 clickable.classList.add('opened');
                 content.classList.add('opened');
+                button.classList.add('opened');
                 content.classList.remove('js--sr-only');
                 content.ariaExpanded = "true";
             } else {
                 clickable.classList.remove('opened');
                 content.classList.remove('opened');
+                button.classList.remove('opened');
                 content.classList.add('js--sr-only');
                 content.ariaExpanded = "false";
             }

@@ -4,7 +4,7 @@ export const settings = {
         resize: 1.7,
         numberOfTrail: 25,
         length: 0.06,
-        clickables: ['a', 'button', 'textarea', '.clickable'],
+        clickables: ['a', 'button', '.clickable'],
     },
     field: {
         selectors: {

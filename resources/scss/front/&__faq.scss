@@ -16,6 +16,17 @@
       }
     }
 
+    &__arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: ease 0.3s;
+
+      &.opened {
+        transform: rotate(90deg);
+      }
+    }
+
     &__container {
       display: flex;
       align-content: stretch;
@@ -39,6 +50,7 @@
     &__q-and-a {
       flex-grow: 1;
       border-bottom: $primary-color solid 4px;
+      position: relative;
     }
 
     &__question {

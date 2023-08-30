@@ -27,9 +27,10 @@ function main() {
 
     expandTextArea(document.getElementById('message') as HTMLTextAreaElement);
 
-    faqs.questions[0].forEach((v, index) => {
-        `§`
-        dropDown([faqs.questions[0][index], faqs.buttons[0][index], faqs.answers[0][index]], faqs.answers[0][index])
+    faqs.questions[0].forEach((e, index) => {
+        dropDown([faqs.questions[0][index], faqs.buttons[0][index], faqs.answers[0][index]],
+            faqs.answers[0][index],
+            faqs.buttons[0][index])
     })
 
     addParallax(document.querySelector(settings.planet.planet), -0.4, 50);
