@@ -1,13 +1,13 @@
 <footer class="footer">
     <nav class="footer__socials socials">
         <h2 class="socials__title">My socials</h2>
-        <div class="socials__items">
+        <ul class="socials__items">
             <?php foreach (kc_get_menu('social-media') as $link): ?>
                 <li class="socials__item">
                     <a href="<?= $link->href; ?>" class="socials__link"><?= $link->label; ?></a>
                 </li>
             <?php endforeach; ?>
-        </div>
+        </ul>
     </nav>
     <div class="footer__small">
         <small class="footer__small__copyright">

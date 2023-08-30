@@ -32,7 +32,7 @@
             <p class="about__desc"><?= $about_desc ?></p>
         </section>
         <svg class="separator separator--translate-up" role="img" width="390" height="44.5">
-            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-1"' ?>"/>
+            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-1' ?>"/>
         </svg>
         <section class="front__projects projects">
             <h2 class="projects__title"><?= __kc($projects_title); ?></h2>
@@ -56,11 +56,11 @@
                 See more
                 <svg class="project__arrow" role="img" width="37" height="28">
                     <use stroke="#fff" stroke-width="3px"
-                         xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow"' ?>"/>
+                         xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#arrow' ?>"/>
                 </svg>
             </a>
             <svg class="separator separator--bottom separator--translate-down" role="img" width="390" height="77">
-                <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-2"' ?>"/>
+                <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-2' ?>"/>
             </svg>
         </section>
         <section class="front__qualifications qualifications">
@@ -97,7 +97,7 @@
                         <span class="faq__arrow clickable drop-down--button">
                             <svg role="img" width="22" height="29">
                                 <use
-                                    xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#simple-arrow"' ?>"/>
+                                    xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#simple-arrow' ?>"/>
                             </svg>
                         </span>
                         <p class="faq__answer js--sr-only drop-down--answer clickable"
@@ -108,13 +108,13 @@
             <?php endforeach; ?>
         </section>
         <svg class="separator separator--relative separator--translate-down" role="img" width="390" height="31">
-            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-4"' ?>"/>
+            <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-4' ?>"/>
         </svg>
         <section class="front__contact contact">
             <h2 class="contact__title"><?= $contact_title ?></h2>
             <?php include_once 'partials/contact-form.php'; ?>
             <svg class="separator separator--translate-up" role="img" width="390" height="38">
-                <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-5"' ?>"/>
+                <use xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#separator-5' ?>"/>
             </svg>
         </section>
     </main>

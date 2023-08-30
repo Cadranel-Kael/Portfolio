@@ -35,14 +35,14 @@
             <?php endforeach; ?>
             <li class="nav_item burger-menu">
                 <label for="burger-menu" class="sr-only">burger menu</label>
-                <input type="checkbox" name="menu" id="burger-menu" class="burger-menu__checkbox clickable" aria-expanded="false">
+                <input type="checkbox" name="menu" id="burger-menu" role="button" class="burger-menu__checkbox clickable" aria-expanded="false">
                 <div class="burger-menu__icon">
                     <div></div>
                 </div>
                 <div class="burger-menu__nav">
                     <a class="burger-menu__nav__language" href="#" hreflang="fr">FR</a>
                     <div class="burger-menu__nav__container">
-                        <a class="burger-menu__nav__container__title"><a href="<?= get_home_url(); ?>">Kael Cadranel</a></a>
+                        <a class="burger-menu__nav__container__title" href="<?= get_home_url(); ?>">Kael Cadranel</a>
                         <ul>
                             <?php foreach(kc_get_menu('main') as $link): ?>
                                 <li class="nav__item">
