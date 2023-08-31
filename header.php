@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kael Cadranel">
-    <meta name="description" content="Kael Cadranel's portfolio.">
+    <meta name="description" content="Kael Cadranel's web portfolio.">
     <meta name="keywords" content="web, full-stack, developer, designer, web design">
     <link rel="apple-touch-icon" sizes="180x180" href="<?= get_stylesheet_directory_uri() . '/apple-touch-icon.png' ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= get_stylesheet_directory_uri() . '/favicon-32x32.png' ?>">

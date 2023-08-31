@@ -23,14 +23,27 @@ export function dropDown(clickables, content, button) {
                 clickable.classList.add('opened');
                 content.classList.add('opened');
                 button.classList.add('opened');
-                content.classList.remove('js--sr-only');
+                content.style.display = "block";
+                // content.classList.remove('js--sr-only');
                 content.ariaExpanded = "true";
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+                if (content.style.margin) {
+                    content.style.margin = null;
+                }
             } else {
                 clickable.classList.remove('opened');
                 content.classList.remove('opened');
                 button.classList.remove('opened');
-                content.classList.add('js--sr-only');
+                // content.classList.add('js--sr-only');
                 content.ariaExpanded = "false";
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                }
+                content.style.margin = "0";
             }
         })
     })
