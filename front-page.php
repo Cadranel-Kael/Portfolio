@@ -100,7 +100,7 @@
                                     xlink:href="<?= get_stylesheet_directory_uri() . '/public/images/sprite.svg#simple-arrow' ?>"/>
                             </svg>
                         </span>
-                        <p class="faq__answer js--sr-only drop-down--answer clickable"
+                        <p class="faq__answer drop-down--answer clickable"
                            aria-expanded="true"><?= $faq['answer'] ?>
                         </p>
                     </div>

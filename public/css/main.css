@@ -855,12 +855,17 @@ body {
 .front__faq .faq__question {
   font-size: 1.25rem;
   width: auto;
+  margin-bottom: 0.3125rem;
 }
 .front__faq .faq__answer {
   border-left: #fff solid 2px;
-  margin: 0.3125rem 0 0.8125rem;
+  margin: 0 0 0.8125rem;
   padding-left: 1rem;
   line-height: 1.83;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: none;
 }
 .front__qualifications {
   background: #fff;

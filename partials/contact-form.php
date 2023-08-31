@@ -98,6 +98,8 @@ if (isset($_POST['contact_form'])) {
         </div>
         <span class="form__field__error" id="message-error"><?= $errors['message'] ?? '' ?></span>
     </div>
+    <label for="a_password" class="sr-only" aria-hidden="true">password</label>
+    <input type="text" name="a_password" class="sr-only" aria-hidden="true" tabindex="-1" autocomplete="off">
     <button class="form__field__submit" type="submit">
         Send it off
         <svg class="project__arrow" role="img" width="37" height="28">
