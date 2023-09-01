@@ -37,10 +37,10 @@ if (isset($_POST['contact_form'])) {
     if (empty($errors)) {
         $mail = get_option('admin_email');
         $subject = 'New message from ' . $name;
-        $mail_message = 'Name: ' . $name . '\r\n';
-        $mail_message .= 'Email: ' . $email . '\r\n';
-        $mail_message .= 'Phone: ' . $phone . '\r\n';
-        $mail_message .= 'Company: ' . $company . '\r\n';
+        $mail_message = 'Name: ' . $name . "\r\n";
+        $mail_message .= 'Email: ' . $email . "\r\n";
+        $mail_message .= 'Phone: ' . $phone . "\r\n";
+        $mail_message .= 'Company: ' . $company . "\r\n";
         $mail_message .= $message;
 
         wp_mail($mail, $subject, $mail_message);
