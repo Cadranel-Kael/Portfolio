@@ -26,7 +26,7 @@
         <h2 class="nav__title sr-only">Navigation menu</h2>
         <ul class="nav__list">
             <li>
-                <a title="back to the main page" href="<?= get_home_url(); ?>" class="nav__link">Kael Cadranel</a>
+                <a title="back to the main page" href="<?= get_home_url(); ?>" class="nav__link nav__logo">Kael Cadranel</a>
             </li>
             <?php foreach(kc_get_menu('main') as $link): ?>
                 <li class="nav__item dt-only">

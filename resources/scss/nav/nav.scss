@@ -1,8 +1,19 @@
 .nav {
+
   position: absolute;
   right: 0;
   z-index: 2;
+  &__logo {
+    background: url("../images/logo_kael.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    text-indent: -9999px;
+    width: 94px;
+    height: 73px;
+    left: -50%;
+  }
   &__list {
+    width: 50vw;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;

@@ -237,7 +237,17 @@ section {
   right: 0;
   z-index: 2;
 }
+.nav__logo {
+  background: url(../images/logo_kael.svg?704c1f4b5d3f26f9e5168edbf8bac209) no-repeat;
+  background-size: contain;
+  position: absolute;
+  text-indent: -9999px;
+  width: 94px;
+  height: 73px;
+  left: -50%;
+}
 .nav__list {
+  width: 50vw;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -883,6 +893,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     gap: 2.5625rem;
+    justify-content: center;
   }
   .front__qualifications .qualifications__qualification:nth-child(3n) {
     flex-direction: row-reverse;
@@ -898,6 +909,7 @@ body {
   }
   .front__qualifications .qualifications__qualification > * {
     width: 50%;
+    max-width: 30rem;
   }
 }
 .front__qualifications .qualifications__qualification:first-of-type {
