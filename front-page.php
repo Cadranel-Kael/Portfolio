@@ -76,6 +76,7 @@
                         <p class="qualifications__qualification__school"><?= $qualification['school'] ?>,</p>
                         <p class="qualifications__qualification__location"><?= $qualification['location'] ?></p>
                     </div>
+                    <div class="qualifications__qualification__center-line"></div>
                     <p class="qualifications__qualification__desc">
                         <?= $qualification['desc'] ?>
                     </p>

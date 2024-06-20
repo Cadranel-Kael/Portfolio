@@ -68,6 +68,7 @@
       overflow: hidden;
       transition: max-height 0.2s ease-out;
       display: none;
+      backdrop-filter: blur(4px);
     }
   }
 }
